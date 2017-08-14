@@ -1,0 +1,72 @@
+__author__ ="eduardlopez"
+
+1st - If you are in windows go to your installation folder with cmd
+	(in admin mode (cmd->right click->admin mode))
+	Ex: cd C:\Program Files\MongoDB\Server\3.4\bin
+
+2nd - Go to "C:\Program Files\MongoDB\Server\3.4\bin" and double click to "mongod.exe" with the d in the end. Don't close this windows. It's your MongoDB Database Server !!!
+
+---------------------------------------------------------------------------------------
+Now you can import or export:
+
+
+
+# mongoexport: Being used to export data from a Collection to a file (json, csv,..) 
+# mongoimport: Being used to import data to a Collection from a file (json, csv,..)
+ 
+# mongodump: Being used to export all of a database to files (Put in a folder), including some files (bson, json) 
+# mongostore: Being used to import all of a database from dump directory(Product of mongodump)
+
+# Collections are like the tables in traditional databases. And the collections are grouped in a database
+
+General commands:
+	mongoexport -d database_name -c collection_name -o outfile.json
+	mongoimport -d database_name -c collection_name outfile.json
+
+
+#########################################################################################################
+Commands to export individual collections:
+#########################################################################################################
+mongoexport -d local -c 1-memories-of-succession -o 1-memories-of-succession.json
+mongoexport -d local -c 2-genealogical-population-registers -o 2-genealogical-population-registers.json
+mongoexport -d local -c 3-civil-status-births-certificates -o 3-civil-status-births-certificates.json
+mongoexport -d local -c 4-civil-status-marriage-acts -o 4-civil-status-marriage-acts.json
+mongoexport -d local -c 5-civil-status-deaths -o 5-civil-status-deaths.json
+mongoexport -d local -c 6-military-register -o 6-military-register.json
+mongoexport -d local -c 7-prision-register -o 7-prision-register.json
+mongoexport -d local -c 8-dtb-marriage-actions -o 8-dtb-marriage-actions.json
+mongoexport -d local -c 9-dtb-death-actions -o 9-dtb-death-actions.json
+mongoexport -d local -c 10-dtb-baptisms-certificates -o 10-dtb-baptisms-certificates.json
+#########################################################################################################
+
+
+To create a new database:
+1- Go to: C:\Program Files\MongoDB\Server\3.4\bin
+2- Double click to mongo.exe
+3- Write: show dbs
+3- It will display all the databases that you have
+4- Write: use bhic-databases
+5- This will create a new database, but it will no be saved until we write something on it
+6- Write: db.users.save( {username:"test"} )
+7- Write: show dbs
+8- Now we will see the new database
+
+
+#########################################################################################################
+Commands to import individual collections:
+1- Open a new cmd in admin mode and go to "cd C:\Program Files\MongoDB\Server\3.4\bin"
+2- Write the commands:
+#########################################################################################################
+mongoimport -d bhic-databases -c 1-memories-of-succession 1-memories-of-succession.json
+mongoimport -d bhic-databases -c 2-genealogical-population-registers 2-genealogical-population-registers.json
+mongoimport -d bhic-databases -c 3-civil-status-births-certificates 3-civil-status-births-certificates.json
+mongoimport -d bhic-databases -c 4-civil-status-marriage-acts 4-civil-status-marriage-acts.json
+mongoimport -d bhic-databases -c 5-civil-status-deaths 5-civil-status-deaths.json
+mongoimport -d bhic-databases -c 6-military-register 6-military-register.json
+mongoimport -d bhic-databases -c 7-prision-register 7-prision-register.json
+mongoimport -d bhic-databases -c 8-dtb-marriage-actions 8-dtb-marriage-actions.json
+mongoimport -d bhic-databases -c 9-dtb-death-actions 9-dtb-death-actions.json
+mongoimport -d bhic-databases -c 10-dtb-baptisms-certificates 10-dtb-baptisms-certificates.json
+#########################################################################################################
+
+

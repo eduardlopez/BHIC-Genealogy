@@ -1,0 +1,3 @@
+# INSTRUCTIONS:
+# IF WE WANT TO USE THIS CODE FROM THE PARENT FOLDER, WE HAVE TO INCLUDED LIKE THIS:
+# from string_distance.string_distance import *

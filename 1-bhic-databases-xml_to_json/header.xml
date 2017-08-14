@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2017-05-02T07:55:45Z</responseDate>
+  <request verb="ListRecords" metadataPrefix="a2a">https://webservices.picturae.com/a2a/2e2a7b04-f023-11e5-890e-60f81db16928</request>
+  <ListRecords xmlns:a2a="http://Mindbus.nl/A2A">
